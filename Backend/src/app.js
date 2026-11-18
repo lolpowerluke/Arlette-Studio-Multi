@@ -1,6 +1,9 @@
 import express from "express";
 import cors from "cors";
 import env from "./utils/env.js";
+import db, { migrate } from "./config/db.js";
+
+await migrate();
 
 const app = express();
 
