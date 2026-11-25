@@ -1,16 +1,17 @@
 .loginMain {
-  background-color: var(--bg-secundary);
+  background-color: var(--accent-yellow);
   width: 100vw;
   min-height: 100vh;
   display: flex;
   flex-direction: row;
 
   form {
-    background-color: var(--bg-primary);
+    background-color: var(--bg-light);
     display: flex;
     flex-direction: column;
     height: fit-content;
     padding: 48px;
     gap: 40px;
+    border-radius: 20px;
   }
 }

@@ -1,4 +1,4 @@
-button{
+:where(button) {
     border: none;
     cursor: pointer;
 
@@ -12,7 +12,7 @@ button{
     scale: .94;
 }
 
-button:hover{
+:where(button):hover {
     background-color: var(--button-hover-bg);
     color: var(--button-hover-txt);
     border: 2px solid var(--button-hover-border);
@@ -20,7 +20,7 @@ button:hover{
     scale: 1;
 }
 
-button:active{
+:where(button):active {
     background-color: var(--button-active-bg);
     color: var(--button-active-txt);
     border-color: var(--button-active-border);
