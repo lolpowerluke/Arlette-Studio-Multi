@@ -27,3 +27,10 @@
 
     scale: .94;
 }
+
+.btnSearch {
+    border: none;
+    width: 5rem;
+    height: 3rem;
+    background-color: transparent;
+}
