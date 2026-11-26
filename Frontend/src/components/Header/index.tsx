@@ -5,7 +5,7 @@ export default function Header() {
         <header className={styles.header}>
             <img src="/assets/ArletteLogo.svg" alt="Arlette Logo" />
             <form className={styles.searchForm}>
-                <input type="text" placeholder="Search..." />
+                <input type="text" placeholder="Zoeken" />
                 <button className="btn" type="submit">Search</button>
             </form>
 
