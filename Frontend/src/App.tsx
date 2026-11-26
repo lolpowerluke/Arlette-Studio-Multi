@@ -31,7 +31,7 @@ function AppShell() {
     </>
   );
 }
-
+// we sure we want declarative instead of data mode?
 function AppRoutes() {
   return (
     <div style={{ display: "flex", flexDirection: "column", height: "100%", overflow: "hidden" }}>
