@@ -1,15 +1,17 @@
+import styles from './style.module.css';
+
 export default function Catalog() {
     return (
-        <header className="ArletteHeader">
+        <header className={styles.arletteHeader}>
             <img src="/assets/ArletteLogo.svg" alt="Arlette Logo" />
-            <form className="ArletteSearchForm">
+            <form className={styles.arletteSearchForm}>
                 <input type="text" placeholder="Search..." />
-                <button type="submit">Search</button>
+                <button className="btn" type="submit">Search</button>
             </form>
 
-            <div className="ArletteUserProfile">
+            <div className={styles.arletteUserProfile}>
                 <span>Gwen</span>
-                <button type="button">Logout</button>
+                <button className="btn" type="button">Logout</button>
             </div>
         </header>
     )
