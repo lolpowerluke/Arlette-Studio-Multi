@@ -1,0 +1,24 @@
+
+
+.arletteHeader {
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--accent-yellow);
+    padding-inline: 1rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    box-sizing: border-box;
+}
+
+.arletteSearchForm {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.arletteUserProfile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
