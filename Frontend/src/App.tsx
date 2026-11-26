@@ -7,7 +7,7 @@ import Header from './components/Header';
 
 const LoginPage = lazy(() => import("./pages/LoginPage"));
 
-const ROLE_HOME = {
+const ROLE_HOME: Record<string, string> = {
   arlette: "/admin",
   babbytheek: "/list",
 };

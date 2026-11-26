@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, type FormEvent } from "react";
 import { Navigate } from "react-router-dom";
 import { useAuth } from "@/context/AuthContext";
 import SegmentedControl from "@/components/SegmentedControl";
@@ -14,12 +14,12 @@ export default function LoginPage() {
 
   if (user) return <Navigate to="/" replace />;
 
-  async function handleSubmit(e) {
+  async function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
     try {
       await login(email, password);
     } catch (err) {
-      setError(err.message);
+      setError(err instanceof Error ? err.message : "Login failed");
     }
   }
 
