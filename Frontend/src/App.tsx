@@ -2,6 +2,7 @@ import { lazy, Suspense } from 'react';
 import ErrorBoundary from "./components/ErrorBoundary";
 import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
 import { AuthProvider, useAuth } from './context/AuthContext';
+import Catalog from './pages/Catalog';
 
 const LoginPage = lazy(() => import("./pages/LoginPage"));
 
@@ -27,6 +28,7 @@ function Layout() {
           <Routes>
             <Route path="/" element={<HomeRedirect />} />
             <Route path="/login" element={<ErrorBoundary label="Login"><LoginPage /></ErrorBoundary>} />
+            <Route path="/catalog" element={<ErrorBoundary label="Catalog"><Catalog /></ErrorBoundary>} />
           </Routes>
         </Suspense>
       </main>
