@@ -1,4 +1,4 @@
-import { useState, type FormEvent } from "react";
+import { useState, type SyntheticEvent } from "react";
 import { Navigate } from "react-router-dom";
 import { useAuth } from "@/context/AuthContext";
 import SegmentedControl from "@/components/SegmentedControl";
@@ -14,7 +14,7 @@ export default function LoginPage() {
 
   if (user) return <Navigate to="/" replace />;
 
-  async function handleSubmit(e: FormEvent<HTMLFormElement>) {
+  async function handleSubmit(e: SyntheticEvent<HTMLFormElement>) {
     e.preventDefault();
     try {
       await login(email, password);
@@ -60,7 +60,7 @@ export default function LoginPage() {
             </div>
           }
         </div>
-        <button className={`btn ${s.centered}`} type="submit">Inloggen</button>
+        <button className={`btn ${s.loginBtn}`} type="submit">Inloggen</button>
         {error && <p>{error}</p>}
       </form>
       <div>

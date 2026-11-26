@@ -6,7 +6,7 @@
   --accent-yellow: #EDB74B;
   --cream: #F4EFD7;
 
-  /*     semantic renaming     */
+  /* semantic renaming */
   --bg-blue: var(--accent-greenblue);
   --bg-light: var(--cream);
   --bg-dark: var(--dark);
@@ -14,7 +14,7 @@
   --txt-light: var(--cream);
   --txt-dark: var(--dark);
 
-  /*  buttons  */
+  /* buttons */
   --button-bg: var(--accent-pink);
   --button-txt: var(--cream);
 
@@ -30,5 +30,5 @@
   --input-bg: var(--light);
   --input-border: var(--accent-greenblue);
 
-  /*    computed colours   */
+  /* computed colours */
 }

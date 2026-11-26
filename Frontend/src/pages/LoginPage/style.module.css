@@ -39,9 +39,11 @@
   }
 }
 
-.centered {
+.loginBtn {
   width: 50%;
   margin: 0 auto;
+  font-weight: 600;
+  font-size: 1.2rem;
 }
 
 .fixedLogo {
