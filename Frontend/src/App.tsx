@@ -1,8 +1,9 @@
 import { lazy, Suspense } from 'react';
 import ErrorBoundary from "./components/ErrorBoundary";
-import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, Navigate, Outlet, Route, Routes } from 'react-router-dom';
 import { AuthProvider, useAuth } from './context/AuthContext';
 import Catalog from './pages/Catalog';
+import Header from './components/Header';
 
 const LoginPage = lazy(() => import("./pages/LoginPage"));
 
@@ -20,18 +21,33 @@ function HomeRedirect() {
   return <Navigate to={ROLE_HOME[user.role] ?? "/list"} replace />;
 }
 
-function Layout() {
+function AppShell() {
   return (
-    <div style={{ display: "flex", height: "100%", overflow: "hidden" }}>
+    <>
+      <Header />
       <main>
-        <Suspense fallback={null}>
-          <Routes>
-            <Route path="/" element={<HomeRedirect />} />
-            <Route path="/login" element={<ErrorBoundary label="Login"><LoginPage /></ErrorBoundary>} />
-            <Route path="/catalog" element={<ErrorBoundary label="Catalog"><Catalog /></ErrorBoundary>} />
-          </Routes>
-        </Suspense>
+        <Outlet />
       </main>
+    </>
+  );
+}
+
+function AppRoutes() {
+  return (
+    <div style={{ display: "flex", flexDirection: "column", height: "100%", overflow: "hidden" }}>
+      <Suspense fallback={null}>
+        <Routes>
+          <Route path="/" element={<HomeRedirect />} />
+
+          {/* no header */}
+          <Route path="/login" element={<ErrorBoundary label="Login"><LoginPage /></ErrorBoundary>} />
+
+          {/* header */}
+          <Route element={<AppShell />}>
+            <Route path="/catalog" element={<ErrorBoundary label="Catalog"><Catalog /></ErrorBoundary>} />
+          </Route>
+        </Routes>
+      </Suspense>
     </div>
   );
 }
@@ -40,7 +56,7 @@ export default function App() {
   return (
     <AuthProvider>
       <BrowserRouter>
-        <Layout />
+        <AppRoutes />
       </BrowserRouter>
     </AuthProvider>
   );

@@ -1,6 +1,4 @@
-
-
-.arletteHeader {
+.header {
     width: 100vw;
     display: flex;
     justify-content: space-between;
@@ -11,13 +9,13 @@
     box-sizing: border-box;
 }
 
-.arletteSearchForm {
+.searchForm {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.arletteUserProfile {
+.userProfile {
     display: flex;
     justify-content: center;
     align-items: center;
