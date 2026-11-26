@@ -16,5 +16,30 @@
     padding: 48px;
     gap: 40px;
     border-radius: 20px;
+
+    .marketingText {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .textInputs {
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      align-self: center;
+      gap: 16px;
+
+      div {
+        display: flex;
+        flex-direction: column;
+      }
+    }
   }
+}
+
+.centered {
+  width: 50%;
+  margin: 0 auto;
 }
