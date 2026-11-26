@@ -1,0 +1,29 @@
+.btn {
+    border: none;
+    cursor: pointer;
+
+    width: 160px;
+    height: 48px;
+    border-radius: 100px;
+
+    background-color: var(--button-bg);
+    color: var(--txt-light);
+
+    scale: .94;
+}
+
+.btn:hover {
+    background-color: var(--button-hover-bg);
+    color: var(--button-hover-txt);
+    border: 2px solid var(--button-hover-border);
+
+    scale: 1;
+}
+
+.btn:active {
+    background-color: var(--button-active-bg);
+    color: var(--button-active-txt);
+    border-color: var(--button-active-border);
+
+    scale: .94;
+}
