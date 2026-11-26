@@ -25,6 +25,9 @@ export default function LoginPage() {
 
   return (
     <div className={s.loginMain}>
+      <div className={s.fixedLogo}>
+        <img src="/assets/ArletteLogo.svg" />
+      </div>
       <form onSubmit={handleSubmit}>
         <SegmentedControl
           value={role}

@@ -43,3 +43,9 @@
   width: 50%;
   margin: 0 auto;
 }
+
+.fixedLogo {
+  position: fixed;
+  top: 0.5rem;
+  left: 1rem;
+}
