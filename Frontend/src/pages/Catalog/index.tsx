@@ -1,7 +1,7 @@
 import styles from "./style.module.css"
+import sidebar from "../../components/SidebarFilter"
 import Byb from "@/components/Byb";
 
-import sidebar from "../../components/SidebarFilter"
 export default function Catalog() {
     return (
         <>
