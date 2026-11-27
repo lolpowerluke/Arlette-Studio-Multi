@@ -10,6 +10,7 @@
     color: var(--txt-light);
 
     scale: .94;
+    animation: scale .2s ease-in-out;
 }
 
 .btn:hover {
