@@ -1,15 +1,44 @@
+.bybWrapper{
+    position: relative;
+    background-color: var(--accent-yellow);
+    padding-bottom: 2rem;
+    box-sizing: border-box;
+    height: calc(25vh + 2rem);
+    transition: height 300ms ease;
+}
 
-.bybImage1, .bybImage2 {
-    width: 100%;
-    height: auto;
+.expanded{
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 100;
+}
+
+.byb{
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.backBtn{
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
     z-index: 1;
 }
 
-.bybImage2 {
-    position: relative;
-    top: -10.75vw;
-}
+.buggy {
+    grid-column: 2  /-1;
+    justify-self: center;
+    align-self: end;
 
-.bybWrapper{
-    background-color: var(--accent-yellow);
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 0;
+
+    span {
+
+    }
 }

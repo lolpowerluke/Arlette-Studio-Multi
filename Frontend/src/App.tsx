@@ -5,6 +5,7 @@ import { AuthProvider, useAuth } from './context/AuthContext';
 import Catalog from './pages/Catalog';
 import Header from './components/Header';
 import ThemeProvider from '@/context/ThemeProvider';
+import "./css/App.css"
 
 const LoginPage = lazy(() => import("./pages/LoginPage"));
 

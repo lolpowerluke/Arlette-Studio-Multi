@@ -1,17 +1,41 @@
+import { useRef, useState } from 'react';
 import styles from './style.module.css';
 
 export default function Byb() {
+    const wrapperRef = useRef<HTMLDivElement>(null);
+    const [expanded, setExpanded] = useState(false);
+    const [top, setTop] = useState(0);
+
+    function handleExpand() {
+        const rect = wrapperRef.current?.getBoundingClientRect();
+        setTop(rect ? Math.max(rect.top, 0) : 0);
+        setExpanded(true);
+    }
+
     return (
-        <div className={styles.bybWrapper}>
-            <div className="buildYourBuggy">
-                {/*
-                todo OFWEL: complete redo in only code  //mijn voorkeur
-                todo OFWEL: one solid img for that bs
-                */}
-                <img className={styles.bybImage1} src="../../../assets/Header1.svg"></img>
-                {/*<img className={styles.bybImage2} src="../../../assets/Header2.svg"></img>*/}
-
-
+        <div
+            ref={wrapperRef}
+            className={`${styles.bybWrapper} ${expanded ? styles.expanded : ""}`}
+            style={expanded ? { top, height: `calc(100vh - ${top}px)` } : undefined}
+        >
+            {expanded && (
+                <button
+                    type="button"
+                    className={`btn ${styles.backBtn}`}
+                    onClick={() => setExpanded(false)}
+                >
+                    ← Terug
+                </button>
+            )}
+            <div className={styles.byb} id="byb">
+                <button
+                    type="button"
+                    className={styles.buggy}
+                    onClick={handleExpand}
+                >
+                    <img src="https://placehold.co/200" alt="buggy placeholder"/>
+                    <span>Klik hier</span>
+                </button>
             </div>
         </div>
     )
