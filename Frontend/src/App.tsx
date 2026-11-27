@@ -4,6 +4,7 @@ import { BrowserRouter, Navigate, Outlet, Route, Routes } from 'react-router-dom
 import { AuthProvider, useAuth } from './context/AuthContext';
 import Catalog from './pages/Catalog';
 import Header from './components/Header';
+import ThemeProvider from '@/context/ThemeProvider';
 
 const LoginPage = lazy(() => import("./pages/LoginPage"));
 
@@ -54,10 +55,12 @@ function AppRoutes() {
 
 export default function App() {
   return (
-    <AuthProvider>
-      <BrowserRouter>
-        <AppRoutes />
-      </BrowserRouter>
-    </AuthProvider>
+    <ThemeProvider url="/api/theme" pollMs={60000}>
+      <AuthProvider>
+        <BrowserRouter>
+          <AppRoutes />
+        </BrowserRouter>
+      </AuthProvider>
+    </ThemeProvider>
   );
 }
