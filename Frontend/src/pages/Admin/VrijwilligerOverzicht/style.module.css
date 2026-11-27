@@ -29,3 +29,15 @@
   width: fit-content;
   margin: 0 auto;
 }
+
+.addBtn {
+  height: 60px;
+  border: 4px dashed var(--accent-pink);
+  box-sizing: border-box;
+  border-radius: 10px;
+  font-size: 3rem;
+  color: var(--accent-pink);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

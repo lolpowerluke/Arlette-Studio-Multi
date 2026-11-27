@@ -20,7 +20,7 @@ export default function VrijwilligerOverzicht() {
         <h2 className={s.subtitle}>Bestaande Accounts</h2>
         <div className={s.list}>
           <div className={s.addBtn}>
-
+            +
           </div>
           {uList.map((u) => (
             <VrijwilligerListItem user={u} />
