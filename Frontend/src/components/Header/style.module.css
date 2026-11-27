@@ -15,7 +15,7 @@
     justify-content: center;
     align-items: center;
     width: 30%;
-    background-color: white;
+    background-color: var(--light);
     border-radius: 999px;
     height: fit-content;
     input {
