@@ -1,12 +1,12 @@
 :root {
   --dark: #2F3130;
+  --light: #F8F2E6;
   --accent-pink: #E6496F;
   --accent-greenblue: #95CBBD;
   --accent-yellow: #EDB74B;
   --cream: #F4EFD7;
 
-
-  /*     semantic renaming     */
+  /* semantic renaming */
   --bg-blue: var(--accent-greenblue);
   --bg-light: var(--cream);
   --bg-dark: var(--dark);
@@ -14,8 +14,7 @@
   --txt-light: var(--cream);
   --txt-dark: var(--dark);
 
-
-  /*  buttons  */
+  /* buttons */
   --button-bg: var(--accent-pink);
   --button-txt: var(--cream);
 
@@ -27,5 +26,9 @@
   --button-active-txt: var(--button-bg);
   --button-active-border: var(--button-bg);
 
-  /*    computed colours   */
+  /* inputs */
+  --input-bg: var(--light);
+  --input-border: var(--accent-greenblue);
+
+  /* computed colours */
 }
