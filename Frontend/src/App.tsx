@@ -4,6 +4,7 @@ import { BrowserRouter, Navigate, Outlet, Route, Routes } from 'react-router-dom
 import { AuthProvider, useAuth } from './context/AuthContext';
 import Catalog from './pages/Catalog';
 import Header from './components/Header';
+import ThemeProvider from '@/context/ThemeProvider';
 
 const LoginPage = lazy(() => import("./pages/LoginPage"));
 
@@ -32,6 +33,7 @@ function AppShell() {
   );
 }
 // we sure we want declarative instead of data mode?
+// Feel free to change it to whatever you want; I just made it like this bc copied from diff project of mine
 function AppRoutes() {
   return (
     <div style={{ display: "flex", flexDirection: "column", height: "100%", overflow: "hidden" }}>
@@ -54,10 +56,12 @@ function AppRoutes() {
 
 export default function App() {
   return (
-    <AuthProvider>
-      <BrowserRouter>
-        <AppRoutes />
-      </BrowserRouter>
-    </AuthProvider>
+    <ThemeProvider url="/api/theme" pollMs={60000}>
+      <AuthProvider>
+        <BrowserRouter>
+          <AppRoutes />
+        </BrowserRouter>
+      </AuthProvider>
+    </ThemeProvider>
   );
 }

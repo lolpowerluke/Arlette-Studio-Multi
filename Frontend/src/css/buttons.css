@@ -1,3 +1,5 @@
+
+/*REGULAR BUTTON*/
 .btn {
     border: none;
     cursor: pointer;
@@ -26,4 +28,29 @@
     border-color: var(--button-active-border);
 
     scale: .94;
+}
+
+
+
+
+/*SMALL BUTTON*/
+
+.btnSmall {
+    border: 2px solid var(--button-bg);
+
+    cursor: pointer;
+
+    width: 6rem;
+    height: 2rem;
+    border-radius: 999px;
+
+    background-color: var(--button-bg);
+    color: var(--txt-light);
+    transition-duration: 0.3s;
+}
+
+.btnSmall:hover {
+    background-color: var(--button-hover-bg);
+    color: var(--button-hover-txt);
+    border: 2px solid var(--button-hover-border);
 }
