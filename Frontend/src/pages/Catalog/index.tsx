@@ -1,4 +1,5 @@
 import styles from "./style.module.css"
+import sidebar from "../../components/SidebarFilter"
 export default function Catalog() {
     return (
         <>
@@ -19,7 +20,7 @@ export default function Catalog() {
                 </div>
                 <form className="filters__form">
                     <select name="Beschikbaarheid">
-                        <option 
+
                     </select>
                 </form>
             </aside>
