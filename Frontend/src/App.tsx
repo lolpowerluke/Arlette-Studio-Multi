@@ -5,6 +5,7 @@ import { AuthProvider, useAuth } from './context/AuthContext';
 import Catalog from './pages/Catalog';
 import Header from './components/Header';
 import ThemeProvider from '@/context/ThemeProvider';
+import VrijwilligerOverzicht from './pages/Admin/VrijwilligerOverzicht';
 
 const LoginPage = lazy(() => import("./pages/LoginPage"));
 
@@ -47,6 +48,7 @@ function AppRoutes() {
           {/* header */}
           <Route element={<AppShell />}>
             <Route path="/catalog" element={<ErrorBoundary label="Catalog"><Catalog /></ErrorBoundary>} />
+            <Route path="/admin/users" element={<ErrorBoundary label="Overzicht vrijwilligers"><VrijwilligerOverzicht /></ErrorBoundary>} />
           </Route>
         </Routes>
       </Suspense>

@@ -1,0 +1,32 @@
+.listItem {
+  background-color: var(--accent-yellow);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 10px;
+  border-radius: 5px;
+
+  .left {
+    display: grid;
+    grid-template-columns: 1fr 1fr 2fr 1fr;
+    gap: 20px;
+
+    .firstName,
+    .lastName,
+    .code {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+    }
+  }
+
+  .right {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+
+    div {
+      margin: auto 0;
+    }
+  }
+}
