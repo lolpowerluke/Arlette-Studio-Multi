@@ -9,11 +9,7 @@ export default function VrijwilligerListItem({ user }: Props) {
   return (
     <div className={s.listItem}>
       <div className={s.left}>
-        {user.img &&
-          <img src="" />
-          ||
-          <img src="/assets/emptyProfilePicture.svg" />
-        }
+        <img src={user.img || "/assets/emptyProfilePicture.svg"} />
         <div className={s.firstName}>
           <span>Naam</span>
           <span>{user.firstName}</span>
