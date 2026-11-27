@@ -2,6 +2,7 @@ import styles from './style.module.css';
 
 export default function Header() {
     return (
+        <>
         <header className={styles.header}>
             <img src="/assets/ArletteLogo.svg" alt="Arlette Logo" />
             <form className={styles.searchForm}>
@@ -16,5 +17,6 @@ export default function Header() {
                 <button className="btnSmall" type="button">Logout</button>
             </div>
         </header>
+        </>
     )
 }

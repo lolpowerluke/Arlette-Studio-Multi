@@ -1,0 +1,123 @@
+.filter {
+  background-color: color-mix(in srgb, grey, white);
+  padding: 10px;
+  padding-bottom: 0;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  transition: padding-bottom 0.5s;
+
+  &:has(.controller:checked) {
+    padding-bottom: 10px;
+
+    .optionList {
+      grid-template-rows: 1fr;
+    }
+  }
+
+  .controller:checked+label {
+    &::after {
+      transform: scaleX(1);
+    }
+
+    .chevron {
+      transform: translate(-5px, 2px) rotate(45deg) scale(-1);
+    }
+  }
+
+  label {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      inset: -10px;
+      border-radius: 20px;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      height: 2px;
+      background-color: black;
+      bottom: -5px;
+      left: -3px;
+      right: -3px;
+      transform: scaleX(0);
+      transition: transform 0.5s;
+    }
+
+    .chevron {
+      display: inline-block;
+      width: 8px;
+      height: 8px;
+      border-right: 2px solid black;
+      border-bottom: 2px solid black;
+      transform: translate(-5px, -2px) rotate(45deg) scale(1);
+      transition: transform 0.5s;
+    }
+  }
+
+  .optionList {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 0.5s;
+
+    .inner {
+      overflow: hidden;
+      min-height: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+
+      .option {
+        all: unset;
+        cursor: pointer;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+
+        &:focus-visible {
+          outline: 2px solid black;
+          outline-offset: 2px;
+        }
+
+        &.empty:not(.checked) {
+          opacity: 0.45;
+        }
+
+        .optionLeft {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          gap: 8px;
+        }
+
+        .box {
+          width: 12px;
+          height: 12px;
+          border: 1px solid black;
+          border-radius: 3px;
+          background-color: white;
+        }
+
+        &.checked .box {
+          background-color: black;
+        }
+
+        .optionName {}
+
+        .optionAmount {
+          font-size: 0.8rem;
+          color: grey;
+        }
+      }
+    }
+  }
+}
