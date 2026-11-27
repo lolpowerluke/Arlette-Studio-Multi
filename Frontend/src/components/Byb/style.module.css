@@ -1,10 +1,15 @@
 
 .bybImage1, .bybImage2 {
-    width: 100vw;
+    width: 100%;
     height: auto;
+    z-index: 1;
 }
 
 .bybImage2 {
     position: relative;
     top: -10.75vw;
+}
+
+.bybWrapper{
+    background-color: var(--accent-yellow);
 }
