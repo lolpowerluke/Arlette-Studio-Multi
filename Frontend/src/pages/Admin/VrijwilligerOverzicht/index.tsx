@@ -10,7 +10,7 @@ export default function VrijwilligerOverzicht() {
       { firstName: "Lukas", lastName: "Van Heddegem sldksldklskdskldk", code: "038237" },
       { firstName: "Kiara", lastName: "Geuten", code: "038238" },
       { firstName: "Joachim", lastName: "Gautama", code: "038239" },
-      { firstName: "Rasvan", lastName: "Tanase", code: "038240" },
+      { firstName: "Razvan", lastName: "Tanase", code: "038240" },
     ]);
   }, []);
   return (
